@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <script>
+        // JavaScript for Print Functionality
+        function PrintContent22() {
+            var printContents = document.getElementById("divReciept").innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+            window.print();
+
+            document.body.innerHTML = originalContents;
+            window.location.reload(); // Reload to restore the original content
+        }
+    </script>
+</head>
+<body>
+    <div id="divReciept" class="reciept1" style="color: Black; font-family: Tahoma;">
+        <table style="width: 95%; border-bottom: 1px solid #808080;">
+            <tbody>
+                <tr>
+                    <td style="width: 20%;" align="left">
+                        <img id="MainContent_imgCompany" src="Imgs/CompanyLogo.jpg" style="height: 84px; width: 202px;" alt="Company Logo">
+                    </td>
+                    <td align="left" style="font-size: x-small;">
+                        <b><span id="MainContent_Label1">SHORT TIME2</span></b><br>
+                        <span id="MainContent_Label2">ASHTI-104 SULAIMANIYAH </span><span id="MainContent_Label3">07704860008 07706870008</span>,<br>
+                        <span id="MainContent_Label4">SULAIMANIYAH</span>,<br>
+                        CONTACT NO.: <span id="MainContent_Label5">07704860008</span><br>
+                        FAX NO.: <span id="MainContent_Label6"></span>
+                    </td>
+                    <td>
+                        <input type="submit" name="ctl00$MainContent$btnPrint" value="Print" onclick="PrintContent22(); return false;" id="MainContent_btnPrint" style="width: 4em;">
+                    </td>
+                    <td align="left" colspan="6" style="font-size: medium; text-align: right;"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="font-size: 10px; width: 95%; border-top: 2px; border-bottom: 2px;" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td align="left" width="8%">Date</td>
+                    <td align="left" width="9%"><span id="MainContent_lblDate" class="receiptlbl">16/03/2025</span></td>
+                    <td align="left" width="9%">Local Time</td>
+                    <td align="left" width="20%"><span id="MainContent_lblPreparedOn">15:15</span></td>
+                    <td align="left" width="9%">UTC Time</td>
+                    <td align="left" width="15%"><span id="MainContent_lblPreparedOnUTC">11:15</span></td>
+                    <td align="left" rowspan="2" colspan="3" width="28%" style="padding-left: 10px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span id="MainContent_lblrefcode">CODE NO.</span>
+                                        &nbsp;
+                                        <span id="MainContent_lblPTCN" class="receiptlbl" style="display: inline-block; border-color: Black; border-width: 2px; border-style: Double; font-size: Large; font-weight: bold;"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">Card No.</td>
+                    <td align="left"><span id="MainContent_lblCardNo" class="receiptlbl">133010</span></td>
+                    <td align="left">Mode</td>
+                    <td style="text-align: left; font-size: x-small;"><span id="MainContent_lblModeType" class="receiptlbl" style="font-size: X-Small;">MOBILE WALLET</span></td>
+                    <td align="left">Purpose</td>
+                    <td align="left"><span id="MainContent_lblPOT" class="receiptlbl">MIGRANT WORKER REMITTANCES</span></td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="font-weight: bold; font-size: x-small; font-style: italic; text-decoration: underline; text-align: left; background-color: #D3D3D3; border-top: 1px solid #808080;">Sender Details</td>
+                    <td colspan="3" style="font-weight: bold; font-style: italic; text-decoration: underline; text-align: left; background-color: #D3D3D3; border-top: 1px solid #808080;">Payment Details</td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Full Name.</td>
+                    <td align="left" colspan="4"><b><span id="MainContent_lblRName" class="receiptlbl">MOHAMMED MOSTAFA AKONDO</span></b></td>
+                    <td align="left">Exchange Rate.</td>
+                    <td align="right"><span id="MainContent_lblRate" class="receiptlbl">15.05290041</span></td>
+                    <td align="left"></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Address</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblRAddr" class="receiptlbl">IRAQ SULAIMANIAH</span></td>
+                    <td align="left">LC Amount</td>
+                    <td align="right"><span id="MainContent_lblLC" class="receiptlbltxn">584.000</span></td>
+                    <td align="left"><b><span id="MainContent_lblLCCurr" class="receiptlbltxn">USD</span></b></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Mobile No.</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblRMob" class="receiptlbl">0555069735/</span></td>
+                    <td align="left">Comm Charges.</td>
+                    <td align="right"><span id="MainContent_lblCom" class="receiptlbltxn">6.000</span></td>
+                    <td align="left"><b><span id="MainContent_lblComCurr" class="receiptlbltxn">USD</span></b></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">ID Type</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblRIDType" class="receiptlbl">NATIONAL ID ;ID No. 784198884731922 ;Exp 31/03/2025</span></td>
+                    <td align="left"><span id="MainContent_lblcomDisOrVat">Comm. Discount</span></td>
+                    <td align="right"><span id="MainContent_lblcomDisOrVatResult" class="receiptlbl">0.00</span></td>
+                    <td align="left"><b><span id="MainContent_lblCommDisc" class="receiptlbltxn">USD</span></b></td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="font-weight: bold; font-style: italic; text-decoration: underline; text-align: left; background-color: #D3D3D3;">Receiver Details</td>
+                    <td style="font-weight: bold" align="left"><b>Total Payable</b></td>
+                    <td style="font-weight: bold;" align="right"><b><span id="MainContent_lblNet" class="receiptlbltxn">590.000</span></b></td>
+                    <td style="font-weight: bold" align="left"><b><span id="MainContent_lblNetCurr" class="receiptlbltxn">USD</span></b></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Full Name.</td>
+                    <td align="left" colspan="4"><b><span id="MainContent_lblBName" class="receiptlbl">BRIGHT AKOSAH</span></b></td>
+                    <td align="left"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">ID Details.</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblBIDdtls" class="receiptlbl"></span></td>
+                    <td align="left"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Address</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblBAddr" class="receiptlbl">GHANA</span></td>
+                    <td align="left">FC Amount</td>
+                    <td align="right"><span id="MainContent_lblFC" class="receiptlbltxn">8790.894</span></td>
+                    <td align="left"><b><span id="MainContent_lblFCCurr" class="receiptlbltxn">GHS</span></b></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">Mobile No.</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblBMob" class="receiptlbl">233257379430/</span></td>
+                    <td align="left">BackEnd Charges</td>
+                    <td align="right"><span id="MainContent_lblBackCharge" class="receiptlbl">0.00</span></td>
+                    <td align="left"><b><span id="MainContent_lblBackEndCurr" class="receiptlbltxn">GHS</span></b></td>
+                </tr>
+                <tr style="display: none;">
+                    <td align="left" colspan="2">Message</td>
+                    <td align="left" colspan="4"><span id="MainContent_lblMessage" class="receiptlbl"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="font-weight: bold; font-style: italic; text-decoration: underline; text-align: left; background-color: #D3D3D3;">Payout Location Details</td>
+                    <td align="left"><b>Net FC. Amount</b></td>
+                    <td align="right"><b><span id="MainContent_lblNetFC" class="receiptlbl">8790.894</span></b></td>
+                    <td align="left"><b><span id="MainContent_lblNetFCCurr" class="receiptlbltxn">GHS</span></b></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2"><span id="MainContent_lblBankName" class="receiptlbl">Bankname</span></td>
+                    <td align="left" colspan="4"><b><span id="MainContent_lblPayeeDet" class="receiptlbl">MTN;</span></b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="MainContent_trfromdate">
+                    <td align="left" colspan="2"><span id="MainContent_lblSFromD" class="receiptlbl"></span></td>
+                    <td align="left" colspan="4"><span id="MainContent_lblSFromDate" class="receiptlbl"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="MainContent_trtoDate">
+                    <td align="left" colspan="2"><span id="MainContent_lblSTod" class="receiptlbl"></span></td>
+                    <td align="left" colspan="4"><span id="MainContent_lblStoDate" class="receiptlbl"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="9" style="text-align: center;">
+                        <b><span id="MainContent_lblhelpline" style="font-size: x-small; font-weight: bold;"></span></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; text-align: left; border-bottom: 1px solid #808080; border-top: 1px solid #808080;" colspan="9">
+                        <b>Disclaimer:-</b> It is understood by me/us that should the instrument, through no fault of the company be unpaid. I/We can only reclaim the value thereof at company`s buying rate of the day when the refund takes place. The refund cannot be affected until I/we return the original instrument/receipt/Invoice and the company has received definite advice from there correspondents that the instrument is unpaid and that the original instructions have been cancelled. I/we confirm that the funds for this remittance are made available from legal sources allowed as per the laws of the country. I/we have no objection to any due intelligence/compliance procedures undertaken by you as required by the regulatory authority of the country and I/we have provided the requisite ID`s as per the regulations.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <table width="100%" style="font-size: x-small; text-align: center;">
+                            <tbody>
+                                <tr>
+                                    <td style="border: 1px solid black; height: 30px; vertical-align: bottom;"><b>Sender Signature</b></td>
+                                    <td style="border: 1px solid black; height: 30px; vertical-align: bottom;"><b>Operator Signature&nbsp; [<span id="MainContent_lbluser" style="font-size: x-small; font-weight: bold;">HASN2</span>]</b></td>
+                                    <td style="border: 1px solid black; height: 30px; vertical-align: bottom;"><b>Cashier Signature</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
