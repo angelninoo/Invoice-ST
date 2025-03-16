@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Tahoma, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Receipt Container */
+#divReciept {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Tahoma, sans-serif;
+    color: black;
+}
+
+/* Table Styles */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table td, table th {
+    padding: 5px;
+    border: 1px solid #808080;
+    text-align: left;
+}
+
+table th {
+    background-color: #D3D3D3;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Specific Table Styles */
+table tr td[colspan="6"],
+table tr td[colspan="3"] {
+    background-color: #D3D3D3;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+table tr td[align="right"] {
+    text-align: right;
+}
+
+table tr td[align="left"] {
+    text-align: left;
+}
+
+/* Image Styles */
+#MainContent_imgCompany {
+    height: 84px;
+    width: 202px;
+}
+
+/* Button Styles */
+#MainContent_btnPrint {
+    width: 4em;
+    padding: 5px;
+    font-size: small;
+    cursor: pointer;
+}
+
+/* Label Styles */
+.receiptlbl {
+    font-size: x-small;
+}
+
+.receiptlbltxn {
+    font-size: small;
+    font-weight: bold;
+}
+
+#MainContent_lblPTCN {
+    display: inline-block;
+    border: 2px double black;
+    font-size: large;
+    font-weight: bold;
+    padding: 2px;
+}
+
+/* Disclaimer Styles */
+#MainContent_lblhelpline {
+    font-size: x-small;
+    font-weight: bold;
+    text-align: center;
+}
+
+table tr td[colspan="9"] {
+    font-size: 7px;
+    text-align: left;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 5px;
+}
+
+/* Signature Styles */
+table tr td[style*="border: 1px solid black"] {
+    height: 30px;
+    vertical-align: bottom;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Hidden Elements */
+tr[style="display:none;"] {
+    display: none;
+}
+
+/* Specific Text Styles */
+b {
+    font-weight: bold;
+}
+
+span[style*="font-size:x-small"] {
+    font-size: x-small;
+}
+
+span[style*="font-size:medium"] {
+    font-size: medium;
+}
+
+span[style*="font-size:large"] {
+    font-size: large;
+}
+
+/* Miscellaneous Styles */
+td[style*="padding-left:10px;"] {
+    padding-left: 10px;
+}
+
+td[style*="font-size:x-small;"] {
+    font-size: x-small;
+}
+
+td[style*="font-size:medium;"] {
+    font-size: medium;
+}
+
+/* Print Styles (Optional) */
+@media print {
+    #MainContent_btnPrint {
+        display: none;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table td, table th {
+        padding: 3px;
+    }
+}
